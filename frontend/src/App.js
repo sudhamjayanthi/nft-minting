@@ -102,7 +102,7 @@ function App() {
 			toast.success("Successfully connected!", { id: toastId });
 			
 			setupEventListener();
-			
+
 			const accounts = await ethereum.request({
 				method: "eth_accounts",
 			});
@@ -234,7 +234,7 @@ function App() {
 					(3 OF 50 MINTED)
 				</p> */}
 				<p className='sub-text'>
-					Super Delicious. High Protein. Mint your omelette now.
+					Super Delicious. High Protein. Mint your omelette now. Only fifty available in total.
 				</p>
 
 				{currentAccount ? (
