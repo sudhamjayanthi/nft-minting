@@ -125,7 +125,7 @@ function App() {
 			});
 		};
 		
-		const mintNFT = async () => {
+	const mintNFT = async () => {
 			try {
 				// Checks and switches chain
 			if (ethereum) {
@@ -207,7 +207,7 @@ function App() {
 		}
 	};
 
-	useEffect(() => checkIfAccountIsConnected(), []);
+	useEffect(() => checkIfAccountIsConnected(), [checkIfAccountIsConnected]);
 
 	return (
 		<div className='App'>
