@@ -207,7 +207,7 @@ function App() {
 		}
 	};
 
-	useEffect(() => checkIfAccountIsConnected(), [checkIfAccountIsConnected]);
+	useEffect(() => checkIfAccountIsConnected(), []);
 
 	return (
 		<div className='App'>
