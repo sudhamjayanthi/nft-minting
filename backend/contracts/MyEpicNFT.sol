@@ -21,7 +21,7 @@ contract MyEpicNFT is ERC721URIStorage {
     string middleSvg =
         '</text><text style="font-size:9px;font-weight:700" dominant-baseline="middle" text-anchor="middle" class="t" y="95%" x="50%">owned by ';
 
-    constructor() ERC721("Omlette Paradise", "SQUARE") {
+    constructor() ERC721("Omletteee Paradiseee", "SQUARE") {
         console.log("WAGMI");
     }
 
@@ -58,7 +58,10 @@ contract MyEpicNFT is ERC721URIStorage {
 
         _setTokenURI(newItemId, finalTokenUri);
 
+        emit NewEpicNFTMinted(msg.sender, newItemId);
+
         _tokenIds.increment();
+
     }
 
     function mintedSoFar() public view returns (uint256) {

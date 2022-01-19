@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import "./App.css";
 
 const { ethereum } = window;
-const contractAddress = "0xDa325e83A752B525aeD8A16e082FeC37f229cD23";
+const contractAddress = "0xF87f890C5257a0E879CC483184B7F85e3404a8C1";
 
 function App() {
 	const [currentAccount, setCurrentAccount] = useState("");
