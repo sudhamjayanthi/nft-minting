@@ -234,7 +234,8 @@ function App() {
 					(3 OF 50 MINTED)
 				</p> */}
 				<p className='sub-text'>
-					Super Delicious. High Protein. Mint your omelette now. Only fifty available in total.
+					Super Delicious. High Protein. Mint your omelette now. Only
+					fifty available in total.
 				</p>
 
 				{currentAccount ? (
@@ -306,7 +307,7 @@ function App() {
 				</p>
 				<p className='footer-link'>
 					view collection on{" "}
-					<a href='https://testnets.opensea.io/collection/omlette-paradise-v2'>
+					<a href='https://testnets.opensea.io/collection/omletteee-paradiseee'>
 						opensea
 					</a>{" "}
 					🌊
