@@ -1,6 +1,6 @@
 const main = async () => {
-    const contractFactory = await hre.ethers.getContractFactory('MyEpicNFT')
-    const contract = await contractFactory.deploy()
+    const contractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
+    const contract = await contractFactory.deploy();
 
     await contract.deployed();
     
@@ -12,12 +12,20 @@ const main = async () => {
 
     //     console.log("Mining...")
     //     await txn.wait();
-        
+    
     //     console.log("Successfully mintend NFT #", i);
     // }
+    
+    // console.log(await contract.mintedSoFar());    
 
-    console.log(await contract.mintedSoFar());    
-};
+    let txn = await contract.makeAnEpicNFT("satoshi"); 
+
+    console.log("Mining...")
+    let receipt = await txn.wait();
+
+    console.log(receipt.events[1].args.tokenId.toNumber()) 
+    
+}
 
 const runMain = async () => {
     try {
