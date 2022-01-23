@@ -105,7 +105,7 @@ function App() {
 				return
 			}
 
-			const nftContract = connectToContract()
+			const nftContract = await connectToContract()
 
 			nftContract.on("NewEpicNFTMinted", (from, tokenId) => {
 				
@@ -198,8 +198,9 @@ function App() {
 				id: toastId,
 				duration: 3000
 			})
-
+			
 			setTransactionId(txn.hash)
+			setupEventListener()
 			updateMintedSoFar()
 
 			
