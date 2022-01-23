@@ -185,6 +185,8 @@ function App() {
 
 			const nftContract = await connectToContract()
 
+			if (!name) setName("anon")
+
 			let txn = await nftContract.makeAnEpicNFT(name.toLowerCase())
 
 			toast.loading("Transaction is being mined...", {
@@ -202,7 +204,8 @@ function App() {
 			setTransactionId(txn.hash)
 			setupEventListener()
 			updateMintedSoFar()
-
+			
+			setName("")
 			
 		} catch (error) {
 
